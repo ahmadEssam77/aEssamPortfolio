@@ -1,0 +1,303 @@
+/* Variables -- Main colors and fonts */
+:root {
+    --main-color: #FFB400;
+    --main-bg-color: #111111;
+    --icons-bg: #2b2a2a;
+    --another-icons-bg: #444;
+    --font-pop: 'Poppins', sans-serif;
+    --font-open: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--icons-bg);
+}
+
+/* Home section */
+#home {
+    background-color: var(--main-bg-color);
+}
+
+/* Styling image and orange div section */
+.orange-bg-image {
+    background-color: var(--main-color);
+    height: 100vh;
+    transform: skew(17deg);
+}
+
+.pp  {
+    width: 80%;
+    transform: translate( 0% , 25%);
+    border-radius: 7%;
+}
+
+/* Styling intro info section */
+.home-intro h1 {
+    color: var(--main-color);
+    position: relative;
+    font-size: 51px;
+    font-family: var(--font-pop);
+}
+
+.home-intro h1::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    border-radius: 3px;
+}
+
+.home-intro h2 {
+    font-size: 51px;
+    font-family: var(--font-pop);
+}
+
+.home-intro p {
+    font-family: var(--font-open);
+}
+
+.home-intro button {
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--main-color);
+    position: relative;
+    margin-top: 1rem;
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
+}
+
+.home-intro button span {
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    top: 5%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling navigation section */
+/* ============================ Pilot Mode =========================== */
+.icons {
+    position: absolute;
+    top: 25%;
+    right: 2%;
+}
+
+.icons a {
+    width: 50px;
+    height: 50px;
+    background-color: var(--another-icons-bg);
+    color: #fff;
+    border-radius: 50%;
+    margin: 15px 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+    position: relative;
+}
+
+.icons a:hover {
+    background-color: var(--main-color);
+}
+
+.active {
+    background-color: var(--main-color) !important;
+}
+
+.icons span {
+    position: absolute;
+    right: 15%;
+    text-transform: uppercase;
+    width: 175px;
+    height: 50px;
+    font-family: var(--font-open);
+    background-color: var(--main-color);
+    border-radius: 25px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.icons a:hover span {
+    opacity: 1;
+}
+
+/* ============================ Pilot Mode=========================== */
+/* ======================================================== */
+
+/* .icons2 {
+    position: absolute;
+    top: 25%;
+    right: 2%;
+}
+
+.icons2 li {
+    width: 50px;
+    height: 50px;
+    background-color: var(--icons-bg);
+    color: #fff;
+    border-radius: 50%;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.icons2 button {
+    margin-right: 15px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-family: var(--font-open);
+    border: 1px solid var(--main-color);
+    padding: 10px 30px;
+    transition: all 0.6s;
+    color: #fff;
+    opacity: 0;
+}
+
+.icons2 span {
+    margin-right: 15.1px;
+}
+
+.icons2 li:hover {
+    background-color: var(--main-color);
+}
+
+.icons2 li:hover button {
+    opacity: 1;
+    display: none;
+}
+
+.active {
+    background-color: var(--main-color) !important;
+} */
+
+
+/* ================================================= */
+
+/* Media Query */
+@media screen and (max-width: 978px) {
+
+    #home {
+        height: 90vh !important;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .icons {
+        position: fixed;
+        background-color: var(--icons-bg);
+        right: 0;
+        top: auto;
+        bottom: -2%;
+        width: 100%;
+    }
+
+    .icons ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .icons span {
+        display: none;
+    }
+
+    .icons a {
+        background-color: var(--another-icons-bg);
+    }
+
+    .orange-container {
+        display: none !important;
+    }
+
+    .pp {
+        border-radius: 50%;
+        width: 35%;
+        border: 4px solid #222;
+        transform: translate(100%, 10%);
+    }
+
+    .home-intro {
+        padding-top: 2rem;
+    }
+
+    .home-intro h1, .home-intro h2 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .home-intro p {
+        font-size: 14px;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .home-intro button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* ===================== Media Query 600px ===================== */
+@media screen and (max-width: 600px) {
+
+    .pp {
+        width: 50%;
+        transform: translate(50%, 10%);
+    }
+
+    .home-intro h1, .home-intro h2 {
+        font-size: 29px;
+    }
+}
+
+/* ===================== Media Query 400px ===================== */
+@media screen and (max-width: 400px) {
+
+    #home {
+        display: flex;
+        align-items: center;
+    }
+
+    .pp {
+        width: 50%;
+        transform: translate(50%, 10%);
+        
+    }
+
+    .home-intro {
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+    }
+
+    .home-intro h2 {
+        font-size: 25px;
+    }
+
+    .home-intro p {
+        line-height: 2;
+    }
+}
