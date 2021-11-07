@@ -23,7 +23,7 @@ body {
 
 /* ====================================== HOME ====================================== */
 /* Home section (page) */
-#home, #about {
+#home, #about, #portfolio {
     background-color: var(--main-bg-color);
 }
 
@@ -278,7 +278,7 @@ button span {
 /* ============================================================================ */
 /* ====================================== ABOUT ====================================== */
 /* About page */
-#about .about-title h2 {
+#about .about-title h2, #portfolio .portfolio-title h2 {
     font-size: 56px;
     font-family: var(--font-pop);
     text-transform: uppercase;
@@ -287,12 +287,12 @@ button span {
     z-index: 645455;
 }
 
-#about .about-title .me {
+#about .about-title .me, #portfolio .portfolio-title .me {
     color: var(--main-color) !important;
     z-index: 6454555;
 }
 
-#about .about-title .shadow {
+#about .about-title .shadow, #portfolio .portfolio-title .shadow {
     font-size: 110px;
     text-transform: uppercase;
     font-family: var(--font-pop);
@@ -465,4 +465,33 @@ button span {
     #about #certifications #third-certificate {
         border-left: 1px solid #dee2e6;
     }
+}
+/* ====================================== ABOUT Media Query ====================================== */
+/* ====================================== END ABOUT ====================================== */
+/* ====================================== PORTFOLIO ====================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contact h3, #in-qs h3 {
+    color: var(--main-color);
+}
+
+#contact div, #in-qs div {
+    font-family: var(--font-pop);
 }
