@@ -92,7 +92,7 @@ button span {
 
 /* Styling navigation section */
 .icons {
-    position: absolute;
+    position: fixed;
     top: 25%;
     right: 2%;
 }
@@ -259,7 +259,6 @@ button span {
     .pp {
         width: 50%;
         transform: translate(50%, 10%);
-        
     }
 
     .home-intro {
@@ -302,6 +301,10 @@ button span {
     left: 50%;
     transform: translateX(-50%);    
     opacity: 0.4;
+}
+
+#about .about-title .pp-about {
+    display: none;
 }
 
 #about .personal-info h3 {
@@ -421,17 +424,45 @@ button span {
     font-family: var(--font-open);
     color: var(--main-bg-color);
     position: relative;
-    left: 120%;
-    /* transition: left 1s 2s; */
+    left: 125%;
 }
 
 #about #certifications .layer p {
     position: relative;
-    left: 120%;
-    /* transition: left 1s 2.5s; */
+    left: 125%;
 }
 
 
 /* ====================================== ABOUT ====================================== */
+/* ====================================== ABOUT Media Query ====================================== */
+@media screen and (max-width: 600px) {
 
+    #about .about-title h2 {
+        font-size: 35px;
+    }
 
+    #about .about-title .shadow {
+        display: none;
+    }
+
+    #about .about-title .pp-about {
+        border-radius: 50%;
+        width: 50%;
+        border: 4px solid #222;
+        transform: translate(50%, 10%);
+        display: block;
+    }
+
+    #about .personal-info span {
+        display: block;
+    }
+
+    #about .completed-projects {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    #about #certifications #third-certificate {
+        border-left: 1px solid #dee2e6;
+    }
+}

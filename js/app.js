@@ -7,9 +7,9 @@ const closeBtn = document.querySelector(".close-modal");  // Select the close si
 
 // Display any page none. Then show it again by slideDown jquery effect
 // homePage.style.display = "none";
-$("#home").slideDown(850);       // this effect influnce or override over the about effect, I don't know why, will figure that out
-aboutPage.style.display = "none";
-$("#about").slideDown(500);
+//$("#home").slideDown(850);       // this effect influnce or override over the about effect, I don't know why, will figure that out
+// aboutPage.style.display = "none";
+// $("#about").slideDown(500);
 
 //
 // aboutMeBtn.addEventListener("click", function () {
