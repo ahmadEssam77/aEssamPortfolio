@@ -94,10 +94,20 @@ button span {
 .icons {
     position: fixed;
     top: 25%;
-    right: 2%;
+    right: 2.5%;
 }
 
-.icons a {
+.light-night-mode {
+    position: fixed;
+    right: 2.5%;
+    top: 1.5%;
+}
+
+.light-night-mode i {
+    font-size: 1.4rem;
+}
+
+.icons a, .light-night-mode a {
     width: 50px;
     height: 50px;
     background-color: var(--another-icons-bg);
@@ -142,11 +152,22 @@ button span {
 }
 
 /* ====================================== My Modal ====================================== */
+
+.parent-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.9);
+    display: none;
+}
+
 .my-modal {
     width: 60%;
     height: 500px;
-    background-color: #777;
-    /* overflow-y: auto; */
+    background-color: var(--main-bg-color);
+    overflow-y: auto;
     position: absolute;
     z-index: 555;
     top: 50%;
@@ -159,8 +180,10 @@ button span {
 .close-modal {
     cursor: pointer;
     position: absolute;
-    right: -5%;
-    top: -8%;
+    right: 17%;
+    top: 8%;
+    z-index: 150;
+    font-size: 3rem;
     color: #fff;
 }
 
@@ -233,6 +256,14 @@ button span {
         margin-right: auto;
     }
 
+    .my-modal {
+        width: 75%;
+    }
+
+    .close-modal {
+        font-size: 2rem;
+    }
+
 }
 
 /* ===================== Media Query 600px ===================== */
@@ -245,6 +276,14 @@ button span {
 
     .home-intro h1, .home-intro h2 {
         font-size: 29px;
+    }
+
+    .my-modal {
+        width: 75%;
+    }
+
+    .close-modal {
+        font-size: 2rem;
     }
 }
 
@@ -273,12 +312,16 @@ button span {
     .home-intro p {
         line-height: 2;
     }
+    .close-modal {
+        font-size: 2rem;
+    }
 }
 /* ====================================== HOME ====================================== */
 /* ============================================================================ */
 /* ====================================== ABOUT ====================================== */
 /* About page */
-#about .about-title h2, #portfolio .portfolio-title h2 {
+#about .about-title h2, #portfolio .portfolio-title h2,
+.my-modal .about-title h2 {
     font-size: 56px;
     font-family: var(--font-pop);
     text-transform: uppercase;
@@ -287,12 +330,14 @@ button span {
     z-index: 645455;
 }
 
-#about .about-title .me, #portfolio .portfolio-title .me {
+#about .about-title .me, #portfolio .portfolio-title .me,
+.my-modal .about-title .me {
     color: var(--main-color) !important;
     z-index: 6454555;
 }
 
-#about .about-title .shadow, #portfolio .portfolio-title .shadow {
+#about .about-title .shadow, #portfolio .portfolio-title .shadow,
+.my-modal .about-title .shadow {
     font-size: 110px;
     text-transform: uppercase;
     font-family: var(--font-pop);
@@ -303,41 +348,48 @@ button span {
     opacity: 0.4;
 }
 
-#about .about-title .pp-about {
+#about .about-title .pp-about,
+.my-modal .about-title .pp-about {
     display: none;
 }
 
-#about .personal-info h3 {
+#about .personal-info h3,
+.my-modal .personal-info h3 {
     color: #fff;
     font-size: 26px;
     font-family: var(--font-pop);
     text-transform: uppercase;
 }
 
-#about .personal-info ul {
+#about .personal-info ul,
+.my-modal .personal-info ul {
     columns: 2;
     line-height: 2.5;
     /* width: 70%; */
 }
 
-#about .personal-info ul li {
+#about .personal-info ul li,
+.my-modal .personal-info ul li {
     color: #525252;
     font-family: var(--font-open);
 }
 
-#about .completed-projects .box {
+#about .completed-projects .box,
+.my-modal .completed-projects .box {
     border: 1px solid var(--divider-color);
     border-radius: 5px;
     padding: 15px 30px;
     font-family: var(--font-pop);
 }
 
-#about .completed-projects .box div {
+#about .completed-projects .box div,
+.my-modal .completed-projects .box div {
     font-size: 50px;
     color: var(--main-color);
 }
 
-#about .divider {
+#about .divider, 
+.my-modal .divider {
     width: 40%;
     margin: auto;
     height: 1px;
@@ -365,33 +417,39 @@ button span {
   }
 
 /* Certifications */
-#about #certifications .certifications-wrapper {
+#about #certifications .certifications-wrapper,
+.my-modal #certifications .certifications-wrapper {
     width: 70%;
     margin: auto;
 }
 
-#about #certifications p {
+#about #certifications p,
+.my-modal #certifications p {
     color: #fff;
     font-family: var(--font-pop);
 }
 
-#about #certifications a {
+#about #certifications a,
+.my-modal #certifications a {
     color: var(--main-color);
     text-decoration: none;
     font-family: var(--font-open);
 }
 
-#about #certifications img {
+#about #certifications img,
+.my-modal #certifications img {
     width: 100%;
     height: 250px;
     border-radius: 7px;
 }
 
-#about #certifications .fit-for-image {
+#about #certifications .fit-for-image,
+.my-modal #certifications .fit-for-image {
     height: 250px;
 }
 
-#about #certifications .layer {
+#about #certifications .layer,
+.my-modal #certifications .layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -400,34 +458,40 @@ button span {
     transition: all 1s;
 }
 
-#about #certifications .fit-for-image:hover .layer {
+#about #certifications .fit-for-image:hover .layer,
+.my-modal #certifications .fit-for-image:hover .layer {
     transform: rotate(360deg);
     background-color: rgba(150, 122, 46, 0.4);
 }
 
-#about #certifications .fit-for-image:hover img {
+#about #certifications .fit-for-image:hover img,
+.my-modal #certifications .fit-for-image:hover img {
     transform: scale(1.1);
     transition: transform 1s 1s;
 }
 
-#about #certifications .fit-for-image:hover h3 {
+#about #certifications .fit-for-image:hover h3,
+.my-modal #certifications .fit-for-image:hover h3 {
     left: 0;
     transition: left 1s 2s;
 }
 
-#about #certifications .fit-for-image:hover p {
+#about #certifications .fit-for-image:hover p,
+.my-modal #certifications .fit-for-image:hover p {
     left: 0;
     transition: left 1s 2.5s;
 }
 
-#about #certifications .layer h3 {
+#about #certifications .layer h3,
+.my-modal #certifications .layer h3 {
     font-family: var(--font-open);
     color: var(--main-bg-color);
     position: relative;
     left: 125%;
 }
 
-#about #certifications .layer p {
+#about #certifications .layer p,
+.my-modal #certifications .layer p {
     position: relative;
     left: 125%;
 }
@@ -437,15 +501,18 @@ button span {
 /* ====================================== ABOUT Media Query ====================================== */
 @media screen and (max-width: 600px) {
 
-    #about .about-title h2 {
+    #about .about-title h2,
+    .my-modal .about-title h2 {
         font-size: 35px;
     }
 
-    #about .about-title .shadow {
+    #about .about-title .shadow,
+    .my-modal .about-title .shadow {
         display: none;
     }
 
-    #about .about-title .pp-about {
+    #about .about-title .pp-about,
+    .my-modal .about-title .pp-about {
         border-radius: 50%;
         width: 50%;
         border: 4px solid #222;
@@ -453,16 +520,19 @@ button span {
         display: block;
     }
 
-    #about .personal-info span {
+    #about .personal-info span,
+    .my-modal .personal-info span {
         display: block;
     }
 
-    #about .completed-projects {
+    #about .completed-projects,
+    .my-modal .completed-projects {
         flex-direction: column !important;
         align-items: center;
     }
 
-    #about #certifications #third-certificate {
+    #about #certifications #third-certificate,
+    .my-modal #certifications #third-certificate {
         border-left: 1px solid #dee2e6;
     }
 }

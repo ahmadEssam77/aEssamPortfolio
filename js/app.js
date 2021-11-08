@@ -2,7 +2,6 @@
 const homePage = document.getElementById("home"); // Select home page
 const aboutPage = document.getElementById("about"); // Select about page
 const aboutMeBtn = document.querySelector(".about-me-btn");  // Select about me btn
-const myModal = document.querySelector(".my-modal");  // Select the about div my modal
 const closeBtn = document.querySelector(".close-modal");  // Select the close sign in modal
 
 // Display any page none. Then show it again by slideDown jquery effect
@@ -11,15 +10,16 @@ const closeBtn = document.querySelector(".close-modal");  // Select the close si
 // aboutPage.style.display = "none";
 // $("#about").slideDown(500);
 
-//
-// aboutMeBtn.addEventListener("click", function () {
-//     $(".my-modal").show(500);
-//     myModal.style.display = "block";
-// });
+// About Me button function, to display about info
+aboutMeBtn.addEventListener("click", function () {
+    $(".parent-modal").show(300);
+    $(".my-modal").show(300);
+});
 
-// closeBtn.addEventListener("click", function() {
-//     $(".my-modal").hide(500);
-// });
+closeBtn.addEventListener("click", function () {
+    $(".parent-modal").hide(200);
+    $(".my-modal").hide(200);
+});
 
 // Prgressbar function for all
 function progressBarForAll(changeID, time) {
@@ -64,3 +64,4 @@ progressBarForAll(jqProgress, 0.97);
 progressBarForAll(angularProgress, 0.80);
 progressBarForAll(sassProgress, 0.85);
 progressBarForAll(gitProgress, 0.96);
+
