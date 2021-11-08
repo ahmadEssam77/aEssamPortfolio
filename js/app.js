@@ -11,15 +11,24 @@ const closeBtn = document.querySelector(".close-modal");  // Select the close si
 // $("#about").slideDown(500);
 
 // About Me button function, to display about info
-aboutMeBtn.addEventListener("click", function () {
+function showTheModal() {
     $(".parent-modal").show(300);
     $(".my-modal").show(300);
-});
+}
+// aboutMeBtn.addEventListener("click", function () {
+//     $(".parent-modal").show(300);
+//     $(".my-modal").show(300);
+// });
 
-closeBtn.addEventListener("click", function () {
+function closeTheModal() {
     $(".parent-modal").hide(200);
     $(".my-modal").hide(200);
-});
+}
+
+// closeBtn.addEventListener("click", function () {
+//     $(".parent-modal").hide(200);
+//     $(".my-modal").hide(200);
+// });
 
 // Prgressbar function for all
 function progressBarForAll(changeID, time) {
