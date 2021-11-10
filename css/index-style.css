@@ -499,6 +499,16 @@ button span {
 
 /* ====================================== ABOUT ====================================== */
 /* ====================================== ABOUT Media Query ====================================== */
+
+@media screen and (max-width: 978px) {
+    
+    #about #certifications .fit-for-image,
+    .my-modal #certifications .fit-for-image { 
+        height: 170px;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
 
     #about .about-title h2,
@@ -539,16 +549,22 @@ button span {
     .my-modal #certifications #third-certificate {
         border-left: 1px solid #dee2e6;
     }
+
+    #about #certifications .layer h3,
+    .my-modal #certifications .layer h3 {
+        font-size: 0.9rem;
+    }
+
+    #about #certifications .layer p,
+    .my-modal #certifications .layer p {
+        font-size: 0.7rem;
+    }
+
+
 }
 /* ====================================== ABOUT Media Query ====================================== */
 /* ====================================== END ABOUT ====================================== */
 /* ====================================== PORTFOLIO ====================================== */
-
-
-
-
-
-
 
 
 
