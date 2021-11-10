@@ -506,6 +506,10 @@ button span {
         font-size: 35px;
     }
 
+    .my-modal {
+        height: 400px;
+    }
+
     #about .about-title .shadow,
     .my-modal .about-title .shadow {
         display: none;
