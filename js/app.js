@@ -9,16 +9,24 @@ const closeBtn = document.querySelector(".close-modal");  // Select the close si
 //$("#home").slideDown(850);       // this effect influnce or override over the about effect, I don't know why, will figure that out
 // aboutPage.style.display = "none";
 // $("#about").slideDown(500);
-let getTheTitle;
-let changeTitle;
+let getTitle;
+let placeTitleHeading;
 let newTitle;
+let getImage;
+let getOrangeDiv;
+let thePreviousImg;
+let showTheImageInGallery;
 // About Me button function, to display about info
 $("#portfolio .my-projects .layer").click(function(e) {
     $(".parent-modal").show(300);
     $(".my-modal").show(300);
-    getTheTitle = e.target.getAttribute('value');
-    changeTitle = $(".my-modal h2");
-    newTitle = changeTitle.html(getTheTitle);
+    getTitle = e.target.getAttribute('value');
+    placeTitleHeading = $(".my-modal h2");
+    newTitle = placeTitleHeading.html(getTitle);
+    getOrangeDiv = e.target;
+    thePreviousImg = getOrangeDiv.previousElementSibling.getAttribute('src');
+    showTheImageInGallery = $(".parent-modal .portfolio-modal img").prop('src', thePreviousImg);
+    // TODO: How to get the link. maybe I can use if condition. If I clicked on the first project so add this .. ! I don't know.
 });
 
 function showTheModal() {
