@@ -9,12 +9,23 @@ const closeBtn = document.querySelector(".close-modal");  // Select the close si
 //$("#home").slideDown(850);       // this effect influnce or override over the about effect, I don't know why, will figure that out
 // aboutPage.style.display = "none";
 // $("#about").slideDown(500);
-
+let getTheTitle;
+let changeTitle;
+let newTitle;
 // About Me button function, to display about info
+$("#portfolio .my-projects .layer").click(function(e) {
+    $(".parent-modal").show(300);
+    $(".my-modal").show(300);
+    getTheTitle = e.target.getAttribute('value');
+    changeTitle = $(".my-modal h2");
+    newTitle = changeTitle.html(getTheTitle);
+});
+
 function showTheModal() {
     $(".parent-modal").show(300);
     $(".my-modal").show(300);
 }
+
 // aboutMeBtn.addEventListener("click", function () {
 //     $(".parent-modal").show(300);
 //     $(".my-modal").show(300);
