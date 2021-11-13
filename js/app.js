@@ -10,44 +10,70 @@ const closeBtn = document.querySelector(".close-modal");  // Select the close si
 // aboutPage.style.display = "none";
 // $("#about").slideDown(500);
 let getTitle;
-let placeTitleHeading;
+let placeTitleHeading = $(".my-modal h2");
 let newTitle;
 let getImage;
 let getOrangeDiv;
 let thePreviousImg;
 let showTheImageInGallery;
-// About Me button function, to display about info
+let getTheLink;
+
+// Show projects when click on them.
 $("#portfolio .my-projects .layer").click(function(e) {
-    $(".parent-modal").show(300);
-    $(".my-modal").show(300);
+    showTheModal();
     getTitle = e.target.getAttribute('value');
-    placeTitleHeading = $(".my-modal h2");
     newTitle = placeTitleHeading.html(getTitle);
     getOrangeDiv = e.target;
     thePreviousImg = getOrangeDiv.previousElementSibling.getAttribute('src');
-    showTheImageInGallery = $(".parent-modal .portfolio-modal img").prop('src', thePreviousImg);
-    // TODO: How to get the link. maybe I can use if condition. If I clicked on the first project so add this .. ! I don't know.
+    showTheImageInGallery = $(".parent-modal .portfolio-modal img").prop('src', thePreviousImg);  // jQuery function set src img
+    getPreviewLink();
 });
 
+// Get preview link function
+function getPreviewLink() {
+    getTheLink = document.querySelector(".the-link");
+    if (getTitle == "Notes - Angular project") {
+        getTheLink.setAttribute('href', "https://jovial-ride-cee4bb.netlify.app");
+    }
+    else if (getTitle == "Movies - JS API project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Movies-API/");
+    }
+    else if (getTitle == "Food - JS API project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Food-API/");
+    }
+    else if (getTitle == "CRUD - js crud project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/CRUDS-App/");
+    }
+    else if (getTitle == "Bakery - html, and css pure project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Bakery/");
+    }
+    else if (getTitle == "Gallery - js DOM project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Gallery-DOM-App/");
+    }
+    else if (getTitle == "Bookmarket - save your sites project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/BookMarker-App/");
+    }
+    else if (getTitle == "Egyptian party - js and jquery project") {
+        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Egyptian-Party/");
+    }
+    else if (getTitle == "Another project !") {
+        getTheLink.setAttribute('href', "");
+    }
+    else {
+        alert("Incorrect URL");
+    }
+}
+
+// About Me button function, to display about info. Also close function
 function showTheModal() {
     $(".parent-modal").show(300);
     $(".my-modal").show(300);
 }
 
-// aboutMeBtn.addEventListener("click", function () {
-//     $(".parent-modal").show(300);
-//     $(".my-modal").show(300);
-// });
-
 function closeTheModal() {
     $(".parent-modal").hide(200);
     $(".my-modal").hide(200);
 }
-
-// closeBtn.addEventListener("click", function () {
-//     $(".parent-modal").hide(200);
-//     $(".my-modal").hide(200);
-// });
 
 // Prgressbar function for all
 function progressBarForAll(changeID, time) {
