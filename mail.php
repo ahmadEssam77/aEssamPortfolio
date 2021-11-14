@@ -12,5 +12,7 @@ $headers = "From: noreply@ae.com";
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
 }
+// Redirect
+header("Location:thankyou.html");
 
 ?>
