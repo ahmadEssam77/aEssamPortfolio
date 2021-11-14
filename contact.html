@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +13,84 @@
     <link rel="stylesheet" href="css/index-style.css">
     <title>Contact Me</title>
 </head>
+
 <body>
     <div id="contact">
         <div class="text-center py-5 contact-title position-relative">
             <h2 class="pt-3">Get In <span class="me">Touch</span></h2>
             <span class="shadow">contact</span>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="">
+                        <h4 class="px-3 text-white">DON'T BE SHY !</h4>
+                        <p class="px-3 text-white">Feel free to get in touch with me. I am always open to discussing new
+                            projects,
+                            creative
+                            ideas or opportunities to be part of your visions.</p>
+                        <ul class="fa-ul">
+                            <li class="px-3 my-5"><span class="fa-li"><i
+                                        class="fas fa-map fa-2x fa-fw text-warning"></i></span><span class="text-muted">
+                                    Address Point</span>
+                                <p class="text-white">Pyramids Gardens, gate
+                                    one</p>
+                            </li>
+                            <li class="px-3 my-5"><span class="fa-li"><i
+                                        class="fas fa-envelope-open fa-2x fa-fw text-warning"></i></span><span
+                                    class="text-muted"> Mail me</span>
+                                <p class="text-white">
+                                    ahmad77essam@gmail.com</p>
+                            </li>
+                            <li class="px-3 my-5"><span class="fa-li"><i
+                                        class="fas fa-phone-square fa-2x fa-fw fa-rotate-90 text-warning"></i></span><span
+                                    class="text-muted"> Call me</span>
+                                <p class="text-white">
+                                    01061988282</p>
+                            </li>
+                        </ul>
+                        <div class="social-media pb-5">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x bg-social-icons-circle"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x bg-social-icons-circle"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x bg-social-icons-circle"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x bg-social-icons-circle"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="my-container pb-5">
+                        <form action="mail.php" method="post">
+                            <div class="d-flex">
+                                <input type="text" name="senderName" id="" class="form-control rounded-pill mb-4 me-2"
+                                    placeholder="YOUR NAME">
+                                <input type="text" name="senderEmail" id="" class="form-control rounded-pill mb-4 ms-2"
+                                    placeholder="YOUR EMAIL">
+                            </div>
+                            <input type="text" name="senderSubject" id="" class="form-control rounded-pill mb-4"
+                                placeholder="YOUR SUBJECT">
+                            <textarea name="senderMessage" id="" cols="10" rows="10" class="form-control mb-4"
+                                placeholder="YOUR MESSAGE"></textarea>
+                            <button type="submit" class="text-white rounded-pill py-3 ps-5 about-me-btn mb-5 mt-4">Send Message <span><i
+                                        class="fab fa-telegram-plane"></i></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
 
     <!-- Navigation section -- icons -->
     <div class="icons">
@@ -43,4 +114,5 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
