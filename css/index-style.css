@@ -618,6 +618,7 @@ button span {
 #contact .my-container textarea {
     background-color: var(--divider-color);
     border-color: var(--divider-color);
+    color: #fff;
 }
 
 #contact .my-container .form-control:focus,
