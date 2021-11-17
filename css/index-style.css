@@ -604,9 +604,25 @@ button span {
 
 /* ====================================== END PORTFOLIO ====================================== */
 /* ====================================== Contact ====================================== */
+#contact .social-media a {
+    color: var(--icons-bg);
+}
 
-#contact .socia-media .bg-social-icons-circle {
-    background-color: var(--icons-bg) !important;
+#contact .social-media .bg-social-icons-circle {
+    transition: color 0.5s;
+}
+
+#contact .social-media span {
+    transition: transform 1s;
+}
+
+#contact .social-media span:hover {
+    transform: translateY(-10%);
+    cursor: pointer;
+}
+
+#contact .social-media span:hover .bg-social-icons-circle {
+    color: var(--main-color) !important;
 }
 
 #contact .my-container {
