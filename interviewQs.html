@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +13,28 @@
     <link rel="stylesheet" href="css/index-style.css">
     <title>Interview Questions</title>
 </head>
+
 <body>
-    <div id="in-qs" class="vh-100 d-flex align-items-center justify-content-center">
-        <div class=" border rounded-2 p-4 mx-3">
-            <h3>Under development.</h3>
-            <p class="text-white">An accordion will be created here. Contains most of the interview questions as a reference for me.</p>
+    <div id="in-qs">
+        <div class="text-center py-5 interview-title position-relative">
+            <h2 class="pt-3">Interview <span class="me">Qs</span></h2>
+            <span class="shadow">Questions</span>
+        </div>
+        <div class="accordion">
+            <div class="wrapper text-center">
+                <div class="question">
+                    What is HTML5 semantic tags?
+                </div>
+                <p class="answer">Semantic tags are tags that can expect what they do from its name, like nav tag,
+                    section tag, etc..</p>
+                    <div class="question">
+                        What is Sass?
+                    </div>
+                    <p class="answer">Sass is a preprocessor, development stage for CSS. By sass you have over control of your CSS file. Very handy, very easy, and recommended to use.</p>
+            </div>
         </div>
     </div>
-    
+
 
     <!-- Navigation section -- icons -->
     <div class="icons">
@@ -37,10 +52,11 @@
         <a href="#"><i class="far fa-lightbulb"></i></a>
         <!-- <a href="#"><i class="far fa-moon"></i></a> -->
     </div>
-    
+
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
