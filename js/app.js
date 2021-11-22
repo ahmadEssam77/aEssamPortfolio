@@ -76,46 +76,51 @@ function closeTheModal() {
 }
 
 // Prgressbar function for all
-function progressBarForAll(changeID, time) {
-    var bar = new ProgressBar.Circle(changeID, {
-        color: '#fff',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 10,
-        trailWidth: 10,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false
-        },
-        from: { color: '#FFB400', width: 10 },  //252525
-        to: { color: '#FFB400', width: 10 },   // ffb400
-        // Set default step function for all animate calls
-        step: function (state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
+// function progressBarForAll(changeID, time) {
+//     var bar = new ProgressBar.Circle(changeID, {
+//         color: '#fff',
+//         // This has to be the same size as the maximum width to
+//         // prevent clipping
+//         strokeWidth: 10,
+//         trailWidth: 10,
+//         easing: 'easeInOut',
+//         duration: 1400,
+//         text: {
+//             autoStyleContainer: false
+//         },
+//         from: { color: '#FFB400', width: 10 },  //252525
+//         to: { color: '#FFB400', width: 10 },   // ffb400
+//         // Set default step function for all animate calls
+//         step: function (state, circle) {
+//             circle.path.setAttribute('stroke', state.color);
+//             circle.path.setAttribute('stroke-width', state.width);
 
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value);
-            }
+//             var value = Math.round(circle.value() * 100);
+//             if (value === 0) {
+//                 circle.setText('');
+//             } else {
+//                 circle.setText(value);
+//             }
 
-        }
-    });
-    bar.text.style.fontFamily = "'Poppins', sans-serif;";
-    bar.text.style.fontSize = '1.5rem';
+//         }
+//     });
+//     bar.text.style.fontFamily = "'Poppins', sans-serif;";
+//     bar.text.style.fontSize = '1.5rem';
 
-    bar.animate(time);  // Number from 0.0 to 1.0
-}
+//     bar.animate(time);  // Number from 0.0 to 1.0
+// }
 
-progressBarForAll(htmlProgress, 0.98);
-progressBarForAll(cssProgress, 0.96);
-progressBarForAll(bootProgress, 0.97);
-progressBarForAll(jsProgress, 0.89);
-progressBarForAll(jqProgress, 0.97);
-progressBarForAll(angularProgress, 0.80);
-progressBarForAll(sassProgress, 0.85);
-progressBarForAll(gitProgress, 0.96);
+// progressBarForAll(htmlProgress, 0.98);
+// progressBarForAll(cssProgress, 0.96);
+// progressBarForAll(bootProgress, 0.97);
+// progressBarForAll(jsProgress, 0.89);
+// progressBarForAll(jqProgress, 0.97);
+// progressBarForAll(angularProgress, 0.80);
+// progressBarForAll(sassProgress, 0.85);
+// progressBarForAll(gitProgress, 0.96);
+
+// =================================== In - Qs ==============================
+$('.question').click(function() {
+    $(this).next().slideToggle(500);
+});
 

@@ -679,6 +679,7 @@ button span {
 #in-qs .question {
     background-color: darkcyan;
     padding: 15px 10px;
+    cursor: pointer;
 }
 
 #in-qs .answer {
