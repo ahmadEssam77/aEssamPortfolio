@@ -75,6 +75,11 @@ function closeTheModal() {
     $(".my-modal").hide(200);
 }
 
+// =================================== In - Qs ==============================
+$('.question').click(function() {
+    $(this).next().slideToggle(500);
+});
+
 // Prgressbar function for all
 // function progressBarForAll(changeID, time) {
 //     var bar = new ProgressBar.Circle(changeID, {
@@ -119,8 +124,5 @@ function closeTheModal() {
 // progressBarForAll(sassProgress, 0.85);
 // progressBarForAll(gitProgress, 0.96);
 
-// =================================== In - Qs ==============================
-$('.question').click(function() {
-    $(this).next().slideToggle(500);
-});
+
 

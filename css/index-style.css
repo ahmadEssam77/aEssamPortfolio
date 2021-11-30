@@ -680,10 +680,21 @@ button span {
     background-color: darkcyan;
     padding: 15px 10px;
     cursor: pointer;
+    border-bottom: 1px solid var(--divider-color);
 }
 
 #in-qs .answer {
     background-color: mintcream;
     padding: 15px 10px;
     margin-bottom: 0 !important;
+    display: none;
+}
+
+#in-qs .first-answer {
+    display: block;
+}
+
+#in-qs .title {
+    background-color: var(--main-color);
+    padding: 15px 10px;
 }
