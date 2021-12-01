@@ -48,30 +48,59 @@
                 <div class="question">
                     What are types of directives in Angular?
                 </div>
-                <p class="answer">
-                    The three types of directives in Angular are <b>attribute directives, structural directives, and components.</b>
-                </p>
-                <div class="question">
-                    Attribute directives, structural directives, and components??
+                <div class="answer">
+                    The three types of directives in Angular are <b>attribute directives, structural directives, and components.</b><br />
+                    <ul class="text-start">
+                        <li><b>Attribute directives,</b> are a number of built-in directives that we can add to our HTML elements that give them a dynamic behavior.</i> In summary, an attribute directive changes the appearance or behavior of DOM element. EX: first we can create a directive by CLI command ng g d directiveName. After that, will import ElementRef, make a dependency injection to use it. So, now I can write for example el.nativeElement.style.backgroundColor = "yellow"; in the component in the html element tag will add the directive.</li>
+                        <li><b>Structural directives, </b><i>are directives which change the structure of the DOM by adding or removing elements.</i> There are three built-in structural directives, ngIf, ngFor, and ngSwitch. These directives work by using the HTML5 <ng-template></ng-template>tag.</li>
+                        <li><b>Component directives, </b><i>It forms the main class and is declared by @Component.</i> It contains the details on component processing, and usage at run time. </li>
+                    </ul>
                 </div>
-                <p class="answer"></p>
                 <div class="question">
                     What is the decorator in Angular?
                 </div>
                 <p class="answer">
                     Decorator <b>marks a class as an Angular component and provides configuration metadata that determines how the component should be processed,</b> instantiated, and used at runtime.
                 </p>
-                <div class="question"></div>
+                <div class="question">
+                    What types of forms in Angular?
+                </div>
+                <p class="answer">
+                    There are two types of forms in Angular. <b>Reactive forms and Template-driven forms</b>. In short, reactive forms are more comprehensive than template-driven forms. More scalable, reusable, and testable. Use reactive forms.
+                </p>
+                <div class="question">
+                    How can we share data between components in Angular?
+                </div>
+                <div class="answer">
+                    There are <b>five</b> ways to share data between components.<br />
+                    <ul class=" text-start">
+                        <li>Parent to child component</li>
+                        <li>Child to parent component</li>
+                        <li>Sharing data between sibling components</li>
+                        <li>Sharing data using ViewChild property</li>
+                        <li>Sharing data between not related components</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    Parent to child component? vs Child to parent component?
+                </div>
                 <p class="answer"></p>
-                <div class="question"></div>
-                <p class="answer"></p>
-                <div class="question"></div>
-                <p class="answer"></p>
-                <div class="question"></div>
-                <p class="answer"></p>
-                <div class="question"></div>
-                <p class="answer"></p>
-                <div class="question"></div>
+                <div class="question">
+                    What is RxJS?
+                </div>
+                <p class="answer">
+                    RxJS: is a <b>Reactive Extensions for JavaScript</b>, a library for <b>reactive programming using observables</b> that makes it easier to compose asynchrononus or callback-based code.
+                </p>
+                <div class="question">
+                    What is lazy loading in Angular and how to apply it?
+                </div>
+                <p class="answer">
+                    Lazy loading is <b>a technique in Angular that allows you to load JavaScript components asynchrononusly when a specific route is activated.</b> It improves the speed of the application load time by splitting the application into several bundles. When the user navigates through the app, the bundles are loaded as required. <br />
+                    To create lazy loading in Angular we use <b>the angular app routing module and main app module class</b> to lazy load the angular component. You can effortlessly get the AppRoutingModule in the app-routing.module.ts file whereas AppModule class is found in the app.   
+                </p>
+                <div class="question">
+                    What are pipes? and an example of pipes?
+                </div>
                 <p class="answer"></p>
                 <div class="question"></div>
                 <p class="answer"></p>
