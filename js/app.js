@@ -33,10 +33,10 @@ $("#portfolio .my-projects .layer").click(function(e) {
 function getPreviewLink() {
     getTheLink = document.querySelector(".the-link");
     if (getTitle == "Notes - Angular project") {
-        getTheLink.setAttribute('href', "https://jovial-ride-cee4bb.netlify.app");
+        getTheLink.setAttribute('href', "https://trusting-golick-0449f7.netlify.app");
     }
     else if (getTitle == "Movies - JS API project") {
-        getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Movies-API/");
+        getTheLink.setAttribute('href', "https://boring-franklin-1354f8.netlify.app");
     }
     else if (getTitle == "Food - JS API project") {
         getTheLink.setAttribute('href', "https://ahmadessam77.github.io/Food-API/");
